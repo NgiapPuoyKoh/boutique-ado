@@ -5,3 +5,9 @@ env.py
 __pycache__/
 *.py[cod]
 node_modules/
+*.sqlite3
+*.pyc 
+LOG.md
+.vscode/*
+settings.json
+boutique_ado/settings.py
