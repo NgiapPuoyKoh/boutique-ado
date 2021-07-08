@@ -3,8 +3,6 @@ from django.contrib import messages
 
 from .forms import OrderForm
 
-# Create your views here.
-
 
 def checkout(request):
     bag = request.session.get('bag', {})
@@ -16,6 +14,8 @@ def checkout(request):
     template = 'checkout/checkout.html'
     context = {
         'order_form': order_form,
+        'stripe_public_key': 'pk_test_51J8qqVCr99xkCUQ8dcFUpaClvDgLON96ZnrSoVdSabSnsXy8PVgbH56CjbcVjGTQiPEHDjmzQn5ve2WjDpXpQYAQ00qP2O11xB',
+        'client_secret': 'test client secret',
     }
 
     return render(request, template, context)
